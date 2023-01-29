@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #0a101dce;
+    color: aliceblue;
+}
+
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.resultBox {
+    border: 3px solid #1a3e8bce;
+
+}
+
+.resultField {
+    font-size: 25px;
+}
+
+.numbersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.cal-btn {
+    height: 60px;
+    width: 100px;
+    background-color: #061647;
+    border-radius: 20%;
+
+}
+
+
+.operators {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 77%;
+    justify-content: center;
+}
