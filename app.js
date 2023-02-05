@@ -1,36 +1,25 @@
-const btns = document.querySelectorAll('.numbersContainer .cal-btn');
-const resultBox = document.querySelector('#resultBox');
-
-const handleBtns = () => {
-    btns.forEach((e) => {
-    })
-}
-
-btns.forEach((allbtns) => {
-    allbtns.addEventListener('click', () => {
-        resultBox.value += allbtns.value
-        console.log(allbtns.value);
-    })
-})
-
-const resultBtn = document.querySelector("#result")
-const back = document.querySelector("#back")
-const clear = document.querySelector("#clear")
-
-clear.addEventListener("click", () => {
-    resultBox.value = ''
-})
-
-back.addEventListener("click", () => {
-    let newVal = resultBox.value.slice(0, -1)
-    resultBox.value = newVal
-})
-
-const caluculate = (data) => {
-    return eval(data)
-}
-
-resultBtn.addEventListener("click", () => {
-    let ans = caluculate(resultBox.value)
-    resultBox.value = ans
-})
+var btns = document.querySelectorAll('.numbersContainer .cal-btn');
+var resultBox = document.querySelector('#resultBox');
+btns.forEach(function (allbtns) {
+    allbtns.addEventListener('click', function () {
+        resultBox.value += allbtns.textContent || '';
+        console.log(allbtns.textContent);
+    });
+});
+var resultBtn = document.querySelector("#result");
+var back = document.querySelector("#back");
+var clear = document.querySelector("#clear");
+clear.addEventListener("click", function () {
+    resultBox.value = '';
+});
+back.addEventListener("click", function () {
+    var newVal = resultBox.value.slice(0, -1);
+    resultBox.value = newVal;
+});
+var caluculate = function (data) {
+    return eval(data);
+};
+resultBtn.addEventListener("click", function () {
+    var ans = caluculate(resultBox.value);
+    resultBox.value = ans;
+});
